@@ -1,10 +1,14 @@
-# IntelliJ
+# Build outputs
+cmake-build-*/
+build/
+
+# IDEs
+# - IntelliJ
 .idea/
 *.iml
 *.ids
 *.ipr
 *.iws
 
-# Build Directories
-cmake-build-*/
-build/
+# - Visual Studio Code
+.vscode/
