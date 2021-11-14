@@ -3,4 +3,8 @@ project(chlover-engine)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_library(chlover-engine SHARED )
+include(Module)
+
+chlover_module(engine LIBRARY
+
+    )
