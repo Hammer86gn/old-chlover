@@ -1,0 +1,10 @@
+# IntelliJ
+.idea/
+*.iml
+*.ids
+*.ipr
+*.iws
+
+# Build Directories
+cmake-build-*/
+build/
