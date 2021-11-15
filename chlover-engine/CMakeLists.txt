@@ -5,6 +5,11 @@ set(CMAKE_CXX_STANDARD 17)
 
 include(Module)
 
-chlover_module(engine LIBRARY
+add_subdirectory(lib/glfw)
 
+chlover_module(engine LIBRARY
+    INCLUDE include
+    DEPENDENCIES glfw
+    DEPENDENCIES_PKG OpenSSL
+    SOURCES src/asset/Asset.cpp
     )
