@@ -1,5 +1,5 @@
-#ifndef CHLOVER_ASSET_HPP
-#define CHLOVER_ASSET_HPP
+#ifndef CHLOVER_ENGINE_ASSET_HPP
+#define CHLOVER_ENGINE_ASSET_HPP
 
 #include <cstdint>
 #include <array>
