@@ -7,14 +7,19 @@ include_directories(include)
 include(Module)
 
 add_subdirectory(lib/glfw)
+add_subdirectory(lib/glad2/cmake)
 
+glad_add_library(glad2 STATIC 
+    LANGUAGE C
+    API gl:core=3.0
+)
 
 # NOTE TO CHLOE FROM CAE:
 # Header files are not sources 
 # kthxbye
 chlover_module(engine LIBRARY
     INCLUDE include
-    DEPENDENCIES glfw
+    DEPENDENCIES glfw glad2
     DEPENDENCIES_PKG OpenSSL
     SOURCES src/asset/Asset.cpp
     )
