@@ -6,7 +6,7 @@
 #include <string>
 
 namespace chlover::assets {
-    typedef std::array<uint8_t, 16> AssetID;
+    typedef std::string AssetID;
 
     AssetID getAssetID(std::string name);
 

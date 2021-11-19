@@ -21,5 +21,7 @@ chlover_module(engine LIBRARY
     INCLUDE include
     DEPENDENCIES glfw glad2
     DEPENDENCIES_PKG OpenSSL
-    SOURCES src/asset/Asset.cpp
+    SOURCES
+    src/util/Hash.cpp src/util/Representation.cpp
+    src/asset/Asset.cpp
     )

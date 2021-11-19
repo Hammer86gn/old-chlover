@@ -32,7 +32,8 @@ function(chlover_module name)
             set(MODE ${arg})
             set(MODE_TYPE LIST)
             continue()
-        elseif(arg STREQUAL TYPE)
+        elseif(arg STREQUAL TYPE OR
+            arg STREQUAL LINKING)
             set(MODE_PREV ${MODE})
             set(MODE_PREV_TYPE ${MODE_TYPE})
             set(MODE ${arg})
@@ -50,7 +51,7 @@ function(chlover_module name)
     if(PROP_TYPE STREQUAL "LIBRARY")
         add_library(${name} ${PROP_LINKING} ${PROP_SOURCES})
     elseif(PROP_TYPE STREQUAL "EXECUTABLE")
-        add_executable(${name} ${PROP_LINKING} ${PROP_SOURCES})
+        add_executable(${name} ${PROP_SOURCES})
     endif()
 
     # Resolve all dependencies
