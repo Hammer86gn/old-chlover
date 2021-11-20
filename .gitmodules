@@ -6,3 +6,6 @@
 	path = chlover-engine/lib/glad2
 	url = https://github.com/Dav1dde/glad.git
 	branch = glad2
+[submodule "chlover-engine/lib/argh"]
+	path = chlover-engine/lib/argh
+	url = https://github.com/adishavit/argh.git
