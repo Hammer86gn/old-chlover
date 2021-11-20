@@ -14,9 +14,10 @@ glad_add_library(glad2 STATIC
     )
 add_custom_command(
     TARGET glad2 PRE_BUILD
-    COMMAND python3 -m pip install -U -r \"${CMAKE_CURRENT_LIST_DIR}/lib/glad2/requirements.txt\")
+    COMMAND python -m pip install -U -r \"${CMAKE_CURRENT_LIST_DIR}/lib/glad2/requirements.txt\")
 
 add_subdirectory(lib/glfw)
+add_subdirectory(lib/argh)
 # NOTE TO CHLOE FROM CAE:
 # Header files are not sources 
 # kthxbye
@@ -35,3 +36,8 @@ chlover_module(test EXECUTABLE
         DEPENDENCIES engine
         SOURCES
         test/src/TestMain.cpp)
+
+option(CHLOVER_BUILD_TOOLS "Build Chlover tools" ON)
+if (CHLOVER_BUILD_TOOLS)
+    add_subdirectory(tools)
+endif()
