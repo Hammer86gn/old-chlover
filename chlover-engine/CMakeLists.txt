@@ -26,5 +26,12 @@ chlover_module(engine LIBRARY
     DEPENDENCIES_PKG OpenSSL
     SOURCES
     src/util/Hash.cpp src/util/Representation.cpp
-    src/asset/Asset.cpp
+    src/asset/Asset.cpp src/core/application/ChloverApplication.cpp
+    src/core/application/EntryPoint.cpp
     )
+
+chlover_module(test EXECUTABLE
+        INCLUDE test/include
+        DEPENDENCIES engine
+        SOURCES
+        test/src/TestMain.cpp)

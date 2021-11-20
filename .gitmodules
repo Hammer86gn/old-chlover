@@ -1,8 +1,8 @@
 [submodule "chlover-engine/lib/glfw"]
 	path = chlover-engine/lib/glfw
-	url = git@github.com:glfw/glfw.git
+	url = https://github.com/glfw/glfw.git
 	branch = 3.3-stable
 [submodule "chlover-engine/lib/glad2"]
 	path = chlover-engine/lib/glad2
-	url = git@github.com:Dav1dde/glad.git
+	url = https://github.com/Dav1dde/glad.git
 	branch = glad2
